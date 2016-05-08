@@ -25,7 +25,7 @@
 /**
  * App ID for the skill
  */
-var APP_ID = undefined; //replace with "amzn1.echo-sdk-ams.app.[your-unique-value-here]";
+var APP_ID = '';
 
 /**
  * Array containing healthy snacks.
@@ -39,7 +39,7 @@ var SNACKS = [
     'Turkey jerky and saltine crackers',
     'Homemade trail mix',
     'Grapes and low fat mozarella string cheese',
-    'Amonds and apricots',
+    'Almonds and apricots',
     'Peanut butter and a sliced apple',
     'Fat free cottage cheese with cinnamon',
     'Bag of pretzels with spicy mustard',
@@ -49,16 +49,16 @@ var SNACKS = [
     'Small bowl of high protein cereal',
     'Non fat smoothie with half banana and almond milk',
     'Hummus and half whole wheat pita',
-    'Small bag of carrots'
+    'Small bag of carrots',
     'Cup of sliced watermelon',
-    'Non-fat Cheese squares'
+    'Non fat Cheese squares',
     'Hummus and pita chips',
     'A cup of strawberries and blueberries',
     'Mandarines and walnuts',
     'A cup of edamame',
     'Half cucumber and non-fat cream cheese sandwich',
     'Seaweed Salad',
-    'Seaweed roll with brown rice'
+    'Seaweed roll with brown rice',
     'Frozen banana with toasted oats'
 ];
 
@@ -89,7 +89,7 @@ BitSnack.prototype.eventHandlers.onSessionStarted = function (sessionStartedRequ
 
 BitSnack.prototype.eventHandlers.onLaunch = function (launchRequest, session, response) {
     console.log("BitSnack onLaunch requestId: " + launchRequest.requestId + ", sessionId: " + session.sessionId);
-    handleNewFactRequest(response);
+    handleNewSnackRequest(response);
 };
 
 /**
@@ -107,7 +107,7 @@ BitSnack.prototype.intentHandlers = {
 
     "AMAZON.HelpIntent": function (intent, session, response) {
         response.ask(
-            "You can ask Bits and Snacks give a healthy snack, or, you can say exit... What can I help you with?",
+            "You can ask Bites and Snacks give a healthy snack, or, you can say exit... What can I help you with?",
             "What can I help you with?"
         );
     },
@@ -130,7 +130,7 @@ BitSnack.prototype.intentHandlers = {
 function handleNewSnackRequest(response) {
     // Get a random space fact from the space facts list
     var snackIndex = Math.floor(Math.random() * SNACKS.length);
-    var snack = SNACKS[factIndex];
+    var snack = SNACKS[snackIndex];
 
     // Create speech output
     var speechOutput = "Here's your healthy snack: " + snack;
@@ -141,7 +141,7 @@ function handleNewSnackRequest(response) {
 // Create the handler that responds to the Alexa Request.
 exports.handler = function (event, context) {
     // Create an instance of the BitSnack skill.
-    var BitSnack = new BitSnack();
-    BitSnack.execute(event, context);
+    var biteSnackInstance = new BitSnack();
+    biteSnackInstance.execute(event, context);
 };
 

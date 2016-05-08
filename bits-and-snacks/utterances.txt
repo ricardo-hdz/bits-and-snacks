@@ -1,0 +1,10 @@
+GetSnackIntent a snack
+GetSnackIntent a bite
+GetSnackIntent give me a snack
+GetSnackIntent give me a bite
+GetSnackIntent give me a healthy snack
+GetSnackIntent give me a healthy bite
+GetSnackIntent tell me a snack
+GetSnackIntent tell me a bite
+GetSnackIntent tell me a healthy snack
+GetSnackIntent tell me a healthy bite
