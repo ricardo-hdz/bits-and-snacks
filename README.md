@@ -3,9 +3,9 @@ Bits &amp; Snacks - An Amazon Alexa skill to get a healthy snack to complement y
 
 ### Description
 Simple Alexa skill based on the New Fact Skill Template provided by Amazon under the following license: http://aws.amazon.com/apache2.0/
- 
+
  This skill can receive and respond to voice requests made on the Alexa platform and provides the user with a random healthy snack to complement her or his daily nutrition plan.
- 
+
 ### Full Skill Description
 An Amazon Alexa skill to get a healthy snack idea to complement your daily nutrition plan.
 
@@ -18,11 +18,13 @@ Enjoy Bites & Snacks. Stay healthy!
 ### Example
 ```
 One-shot model:
-  User: "Alexa, a snack"
-  User: "Alexa, a bite"
-  User: "Alexa, give a snack"
-  User: "Alexa, give a bite"
-  
+  User: "Alexa, ask bites and snacks for a snack"
+  User: "Alexa, ask bites and snacls for a bite"
+  User: "Alexa, tell bites and snacks to give me a snack"
+  User: "Alexa, tell bites and snacks to give me a bite"
+  User: "Alexa, tell bites and snacks to give me a healthy snack"
+  User: "Alexa, tell bites and snacks to give me a healthy bite"
+
   Alexa: "Here's a delicous snack for you: ..."
  ```
 
